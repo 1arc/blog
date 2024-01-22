@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>IntelBlog</title>
+    <meta name="title" content="InteBlog" />
+    <meta name="description" content="Blogs by Arc" />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="favicon.png" />
+    <link rel="preload" as="image" href="./assets/images/pattern-2.svg" />
+    <link rel="preload" as="image" href="./assets/images/pattern-3.svg" />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="favicon.png" width="80" height="37" alt="logo" />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="favicon.png" width="80" height="37" alt="logo" />
+            </a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a
+                href="/blogs/blogs.html"
+                class="navbar-link hover-1"
+                data-nav-toggler
+                >Blogs</a
+              >
+            </li>
+
+
+            <li>
+              <a href="/dl.html" class="navbar-link hover-1" data-nav-toggler>Download App</a>
+            </li>
+            
+            <li>
+              <a href="#" class="navbar-link hover-1" data-nav-toggler
+                >About</a
+              >
+            </li>
+
+            <li>
+              <a href="#featured" class="navbar-link hover-1" data-nav-toggler
+                >Popular Posts</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link hover-1" data-nav-toggler
+                >✍️Suggest a Blog</a
+              >
+            </li>
+
+            <li>
+              <a href="#footer" class="navbar-link hover-1" data-nav-toggler
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <p class="copyright-text">
+            Copyright 2024 © IntelBlog by Arc - All rights reserved.
+          </p>
+        </nav>
+
+        <a href="#" class="btn btn-primary">Subscribe</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="hero" id="home" aria-label="home">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="headline headline-1 section-title">
+                <span class="span">IntelBlog</span>
+              </h1>
+
+              <p class="hero-text">
+                Experience a new dimension in learning with animated insights.
+                We use purposeful motion to simplify and enrich every
+                interaction in my blogs. Explore for helpful and productive
+                content that elevates your understanding.
+              </p>
+
+              <form
+                action="https://sheetdb.io/api/v1/ly4qf20esnury"
+                method="post"
+                id="sheetdb-form"
+              >
+                <p class="hero-subtitle" style="font-size: 1.7rem;">
+                  Subscribe to get E-mails on our latest blogs.
+                </p>
+
+                <div class="input-wrapper">
+                  <input
+                    type="email"
+                    name="data[email]"
+                    placeholder="Enter your email address"
+                    required
+                    class="input-field"
+                    autocomplete="off"
+                  />
+
+                  <button class="btn btn-primary" type="submit">
+                    <span class="span">Subscribe</span>
+
+                    <ion-icon
+                      name="arrow-forward-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </form>
+
+              <script>
+                var form = document.getElementById("sheetdb-form");
+                form.addEventListener("submit", (e) => {
+                  e.preventDefault();
+                  fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(document.getElementById("sheetdb-form")),
+                  })
+                    .then((response) => response.json())
+                    .then((html) => {
+                      // you can put any JS code here
+                      alert("You successfully signed up");
+                    });
+                });
+              </script>
+            </div>
+
+            <div class="hero-banner">
+              <img
+                src="favicon.png"
+                width="327"
+                height="490"
+                alt="Wren Clark"
+                class="w-100"
+              />
+
+              <img
+                src="./assets/images/pattern-2.svg"
+                width="27"
+                height="26"
+                alt="shape"
+                class="shape shape-1"
+              />
+
+              <img
+                src="./assets/images/pattern-3.svg"
+                width="27"
+                height="26"
+                alt="shape"
+                class="shape shape-2"
+              />
+            </div>
+
+            <img
+              src="./assets/images/shadow-1.svg"
+              width="500"
+              height="800"
+              alt=""
+              class="hero-bg hero-bg-1"
+            />
+
+            <img
+              src="./assets/images/shadow-2.svg"
+              width="500"
+              height="500"
+              alt=""
+              class="hero-bg hero-bg-2"
+            />
+          </div>
+        </section>
+
+        <!-- 
+        - #TOPICS
+      -->
+
+        <!-- 
+        - #FEATURED POST
+      -->
+
+        <section class="section feature" aria-label="feature" id="featured">
+          <div class="container">
+            <h2 class="headline headline-2 section-title">
+              <span class="span">Featured Blogs</span>
+            </h2>
+
+            <p class="section-text">Featured and highly rated articles</p>
+
+            <ul class="feature-list">
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <a href="blogs/blogs/ram-mandir/ram-mandir.html">
+                      <img
+                        src="https://images.livemint.com/img/2020/08/20/1600x900/4e645542-d643-11ea-b961-ad37760ffd4d_1597910076685_1597910169976.jpg"
+                        width="1602"
+                        height="903"
+                        loading="lazy"
+                        alt="Ram Mandir Image"
+                        class="img-cover"
+                      />
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a class="span hover-2">#Religion</a>
+
+                        <a class="span hover-2">#Hinduism</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">5 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Ram Mandir: A Masterpiece of Engineering
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img
+                          src="favicon.png"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          alt="Joseph"
+                          class="profile-banner"
+                        />
+
+                        <div>
+                          <p class="card-title"></p>
+
+                          <p class="card-subtitle"></p>
+                        </div>
+                      </div>
+
+                      <a href="#" class="card-btn">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <a href="">
+                      <img
+                        src="https://tobidigital.com/wp-content/uploads/2022/12/google-sites-logo-on-red-background.png"
+                        width="1602"
+                        height="903" 
+                        loading="lazy"
+                        alt="Google Sites image"
+                        class="img-cover"
+                        style="cursor: not-allowed;"
+                      />
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a class="span hover-2">#Tech</a>
+
+                        <a class="span hover-2">#Info</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2" style="cursor: not-allowed;">
+                        The Dark Truth about Google Sites: Google Sites Exposed
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img
+                          src="favicon.png"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          alt="Joseph"
+                          class="profile-banner"
+                        />
+
+                        <div>
+                          <p class="card-title"></p>
+
+                          <p class="card-subtitle"></p>
+                        </div>
+                      </div>
+
+                      <a href="#" class="card-btn" style="cursor: not-allowed;">Releasing Tomorrow</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <a href="">
+                      <img
+                        src="/IntelBlog3.png"
+                        width="1602"
+                        height="903"
+                        loading="lazy"
+                        alt="Image"
+                        class="img-cover"
+                      />
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#IntelBlog</a>
+
+                        <a href="#" class="span hover-2">#Premiere</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Welcome to IntelBlog
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img
+                          src="favicon.png"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          alt="Joseph"
+                          class="profile-banner"
+                        />
+
+                        <div>
+                          <p class="card-title"></p>
+
+                          <p class="card-subtitle"></p>
+                        </div>
+                      </div>
+
+                      <a href="#" class="card-btn" class="coming-soon">Coming Soon
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <a href="">
+                      <img
+                        src="https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg"
+                        width="1602"
+                        height="903"
+                        loading="lazy"
+                        alt="Image"
+                        class="img-cover" 
+                        style="cursor: not-allowed;"
+                      />
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#</a>
+
+                        <a href="#" class="span hover-2">#</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2" style="cursor: not-allowed;">
+                        Coming Soon
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img
+                          src="favicon.png"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          alt="Joseph"
+                          class="profile-banner"
+                        />
+
+                        <div>
+                          <p class="card-title"></p>
+
+                          <p class="card-subtitle"></p>
+                        </div>
+                      </div>
+
+                      <a href="#" class="card-btn" class="coming-soon" style="cursor: not-allowed;">Coming Soon</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <a href="">
+                      <img
+                        src="https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg"
+                        width="1602"
+                        height="903"
+                        loading="lazy"
+                        alt="Image"
+                        class="img-cover"
+                        style="cursor: not-allowed;"  
+                      />
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#</a>
+
+                        <a href="#" class="span hover-2">#</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2"  style="cursor: not-allowed;">
+                        Coming Soon
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img
+                          src="favicon.png"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          alt="Joseph"
+                          class="profile-banner"
+                        />
+
+                        <div>
+                          <p class="card-title"></p>
+
+                          <p class="card-subtitle"></p>
+                        </div>
+                      </div>
+
+                      <a href="#" class="card-btn" class="coming-soon" style="cursor: not-allowed;">Coming Soon</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a href="blogs/blogs.html" class="btn btn-secondary">
+              <span class="span">View More Blogs</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer>
+      <section area-label="footer" id="footer">
+      <div class="container">
+        <div class="card footer">
+          <div class="section footer-top">
+            <div class="footer-brand">
+              <a href="#" class="logo">
+                <img
+                  src="IntelBlog2.png"
+                  width="300"
+                  height="50"
+                  loading="lazy"
+                  alt="Wren logo"
+                />
+              </a>
+
+          
+            </div>
+
+            <div class="footer-list">
+              <p class="footer-list-title"></p>
+
+              <ul>
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link hover-2"></a>
+                </li>
+              </ul>
+            </div>
+
+
+            <form
+              action="https://sheetdb.io/api/v1/ly4qf20esnury"
+              method="post"
+              id="sheetdb-formm"
+            >
+            
+            <div class="footer-list">
+              <p class="footer-list-title">Newsletter</p>
+
+              <p class="footer-text">
+                Sign up to be first to receive the latest blogs
+              </p>
+
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  name="data[email]"
+                  placeholder="Emaill address"
+                  required
+                  class="input-field"
+                  autocomplete="off"
+                />
+
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <button class="btn btn-primary" type="submit">
+              <span class="span">Subscribe</span>
+
+              <ion-icon
+                name="arrow-forward-outline"
+                aria-hidden="true"
+              ></ion-icon>
+                
+              </a>
+            </div>
+          </div>
+        </form>
+
+          <script>
+            var form = document.getElementById("sheetdb-formm");
+            form.addEventListener("submit", (e) => {
+              e.preventDefault();
+              fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-formm")),
+              })
+                .then((response) => response.json())
+                .then((html) => {
+                  // you can put any JS code here
+                  alert("You successfully signed up");
+                });
+            });
+          </script>
+
+          <div class="footer-bottom">
+            <p class="copyright">
+              &copy; Copyright IntelBlog by
+              <a href="#" class="copyright-link">Arc</a>
+            </p>
+
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://t.me/ArcHubs"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span class="span">Telegram</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" target="_blank" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+
+                  <span class="span" style="cursor: not-allowed;">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
